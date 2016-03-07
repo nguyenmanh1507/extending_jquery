@@ -1,7 +1,7 @@
 $.fn.clearWatermark = function() {
 	return this.each(function() {
 		var field = $(this);
-		if(field.val() == field.attr('title'))
+		if(field.val() == field.data('title'))
 			field.val('');
 	});
 };

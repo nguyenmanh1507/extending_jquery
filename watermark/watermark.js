@@ -6,14 +6,14 @@ $.fn.watermark = function(options) {
 	return this.focus(function() {
 		var field = $(this);
 
-		if(field.val() == field.attr('title'))
+		if(field.val() == field.data('title'))
 			field.val('').removeClass(options.watermarkClass);
 
 	}).blur(function() {
 		var field = $(this);
 
 		if(field.val() == '')
-			field.val(field.attr('title')).addClass(options.watermarkClass);
+			field.val(field.data('title')).addClass(options.watermarkClass);
 	}).blur()
 	;
 };
